@@ -20,6 +20,8 @@ public class EmployeeController {
 	@Autowired 
 	EmployeeService es;
 	
+	int a = 10;
+	
 	@PostMapping (value = "/getsingle")
 	public String getSingle(@RequestBody Employee e) {
 		return es.getSingle(e);
@@ -54,4 +56,6 @@ public class EmployeeController {
    public String getPatch(@PathVariable int n , @RequestBody Employee name) {
 	   return es.getPatch(n,name);
    }
+   
+   
 }
